@@ -1,10 +1,10 @@
 # https://ja.wikipedia.org/wiki/シーザー暗号
 
 
-def cipher(sentense, key=3):
+def cipher(sentence, key=3):
     m = ord('A')
     n = ord('Z')
-    for c in sentense:
+    for c in sentence:
         d = ord(c)
         if m <= d and d <= n:
             c = chr(((d - key) - m) % 26 + m)
