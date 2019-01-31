@@ -53,7 +53,7 @@ public class Oyatu {
 				fake_list = "" + u + v + w + x + y + z;
 			} else if (balance <= 300 && happiness > max_happiness) {
 				max_happiness = happiness;
-				fake_list += "|" + u + v + w + x + y + z;
+				fake_list = "" + u + v + w + x + y + z;
 			}
 		}
 
