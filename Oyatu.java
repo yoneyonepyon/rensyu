@@ -1,3 +1,4 @@
+
 public class Oyatu {
 
 	public static void main(String[] args) {
@@ -49,47 +50,14 @@ public class Oyatu {
 			}
 
 			if (balance <= 300 && happiness == max_happiness) {
-				fake_list = "" + u + v + w + x + y + z;
+				fake_list += "|" + u + v + w + x + y + z;
 			} else if (balance <= 300 && happiness > max_happiness) {
 				max_happiness = happiness;
-				fake_list += "|" + u + v + w + x + y + z;
+				fake_list = "" + u + v + w + x + y + z;
 			}
 		}
 
-		int pt = 0;
-
-		for (int i = 0; i < fake_list.length(); i++) {
-			char sign = fake_list.charAt(i);
-			if (sign == '|') {
-				pt = 0;
-				System.out.println();
-			} else if (sign == '1') {
-				switch (pt) {
-				case 0:
-					System.out.println("ポテトチップス1袋");
-					break;
-				case 1:
-					System.out.println("チョコレート1枚");
-					break;
-				case 2:
-					System.out.println("マシュマロ1袋");
-					break;
-				case 3:
-					System.out.println("飴1個");
-					break;
-				case 4:
-					System.out.println("ガム1箱");
-					break;
-				case 5:
-					System.out.println("せんべい1袋");
-					break;
-
-				default:
-					break;
-				}
-			}
-			pt++;
-		}
+		System.out.println(fake_list);
 
 		System.out.println("満足度 = " + max_happiness);
 	}
